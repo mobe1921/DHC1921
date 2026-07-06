@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#002f7f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="WuMa Rechner">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>DHC WuMa Rechenschieber 2026</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+</head>
+<body>
+<main class="app">
+<header class="app-header">
+<img src="icons/icon-180.png" class="logo" alt="DHC">
+<div class="header-title">DHC WuMa Rechenschieber</div>
+<button id="refreshBtn" class="icon-btn">🔄</button>
+</header>
+
+<section class="sum-card">
+<div id="total" class="total">0,00 €</div>
+<div id="status" class="status">Produkte werden geladen …</div>
+</section>
+
+<nav id="filters" class="filters"></nav>
+<section id="productArea" class="product-grid"></section>
+
+<section class="special-actions">
+<button id="undoBtn" class="wide-btn undo"><span>↩</span><strong>Rückgängig</strong><small>Letzte Position entfernen</small></button>
+<button id="resetBtn" class="wide-btn reset"><span>🗑</span><strong>Zurücksetzen</strong><small>Alle Positionen löschen</small></button>
+</section>
+
+<section id="cartPanel" class="cart-panel" hidden>
+<h2>Bon / Liste</h2>
+<div id="cartList"></div>
+</section>
+
+<footer class="bottom-nav">
+<button id="cashTab" class="nav-item active">▦<span>Kasse</span></button>
+<button id="listTab" class="nav-item">▤<span>Bon / Liste</span></button>
+</footer>
+</main>
+<script>window.PRODUCT_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQa5cx9OGGFvcPzr5LWyBHQINLKACkRQgcpFI5YcswVOYaId1nXdaDITMnUfRh_lTxyn1Jo1RygrDnC/pub?output=csv";</script>
+<script src="app.js"></script>
+</body>
+</html>
